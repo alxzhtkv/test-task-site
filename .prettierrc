@@ -1,0 +1,19 @@
+{
+    "tabWidth": 2,
+    "printWidth": 200,
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "singleQuote": false,
+    "arrowParens": "always",
+    "trailingComma": "none",
+    "overrides": [
+      {
+        "files": ["*.js", "*.css", "*.html"],
+        "options": {
+          "tabWidth": 4,
+          "semi": true
+        }
+      }
+    ]
+  }
+  
