@@ -165,7 +165,7 @@ body {
 
 .subscribe-option {
   position: relative;
-  height: 58px;
+  height: 56px;
   border: none;
   outline: none;
   width: 100%;
@@ -268,6 +268,10 @@ body {
   color: #ffffff;
 }
 .continue-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
   text-decoration: none;
   text-align: center;
   border: none;
@@ -373,19 +377,18 @@ body {
     padding: 0 12px;
   }
   .header {
-    padding: 0px;
-    padding-top: 10px;
+    padding: 12px 12px 0px;
   }
   .title {
-    line-height: 100%;
-    font-size: 30px;
+    /* line-height: 100%; */
+    /* font-size: 30px; */
     margin-bottom: 10px;
   }
   .features-container {
     margin-bottom: 24px;
   }
   .feature-item {
-    height: 123px;
+    height: 139px;
   }
   .feature-item-content > p {
     font-size: 10px;
@@ -407,15 +410,15 @@ body {
     font-size: 11px;
   }
   .subscribe-option-content {
-    padding: 12px 16px;
+    padding: 10px 16px;
   }
-  .subscribe-option {
-    height: 50px;
-  }
+  /* .subscribe-option {
+    height: 58px;
+  } */
 
   .continue-button {
     padding: 12px 16px;
-    height: 50px;
+    /* height: px; */
   }
   .features-container {
     margin-bottom: 16px;
