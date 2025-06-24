@@ -1,329 +1,426 @@
 @font-face {
-    font-family: "SF Pro Display";
-    src: url("./fonts/SFProDisplay-Ultralight.otf") format("opentype");
-    font-style: normal;
-    font-weight: 200;
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Ultralight.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
-    src: url("./fonts/SFProDisplay-Regular.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
-    src: url("./fonts/SFProDisplay-Semibold.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "SF Pro Display";
-    src: url("./fonts/SFProDisplay-Black.otf") format("otf");
-    font-weight: 900;
-    font-style: normal;
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
 }
 @font-face {
-    font-family: "SF Pro Display";
-    src: url("./fonts/SFProDisplay-Bold.ttf") format("ttf");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "SF Pro Display";
+  src: url("./fonts/SFProDisplay-Bold.ttf") format("ttf");
+  font-weight: 600;
+  font-style: normal;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    font-family: "SF Pro Display";
-    width: 100%;
-    height: 100%;
+  font-family: "SF Pro Display";
+  width: 100%;
+  height: 100%;
 }
-
-/* .bg-image {
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/bg.png);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    scale: 1.2
-} */
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/bg.png);
-    background-size: cover;
-    background-position: top;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    /* background-attachment: fixed; */
-    background-color: #000;
-    min-height: 100dvh;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: image-set(url("./images/bg.png") 1x, url("./images/bg@2x.png") 2x);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  background-color: #000;
+  min-height: 100dvh;
 }
+
 .header {
-    width: 100%;
-    padding: 16px;
+  width: 100%;
+  padding: 16px;
 }
-.close-button {
-    height: 24px;
-    width: 24px;
-    all: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.close {
+  all: unset;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
-    height: 100%;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    padding: 0 24px;
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 0 24px;
 }
 
 .title {
-    font-size: 42px;
-    line-height: 46px;
-    text-align: center;
-    color: #fff;
-    font-weight: 900;
-    letter-spacing: 0px;
-    text-transform: capitalize;
-    margin-bottom: 24px;
+  font-size: 42px;
+  line-height: 46px;
+  text-align: center;
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  margin-bottom: 24px;
+  letter-spacing: 0px;
 }
 
 .features-container {
-    width: 100%;
-    margin-bottom: 34px;
-    display: flex;
-    justify-content: space-between;
-    gap: 6px;
+  width: 100%;
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
 }
 
 .feature-item {
-    width: 100%;
-    height: 100%;
-    height: 146px;
-    flex: 1;
-    position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 146px;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
 }
 .feature-item > img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.feature-item-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex: 1;
+  padding: 12px 8px;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-end;
+  box-shadow: inset 0px 0px 100.8px 0px #ff82e43c;
+}
+
+.feature-item-shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(4, 6, 26, 0.0001) 62.04%, rgba(6, 9, 37, 0.558287) 76.68%, #15072f 100%);
+  z-index: 0;
+}
+.feature-item-content > p {
+  z-index: 1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #ffffff;
 }
 
 .subscribe-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 16px;
 }
 
 .subscribe-option {
-    position: relative;
-    height: 58px;
-    border: none;
-    outline: none;
-    width: 100%;
-    color: #000;
-    border-radius: 100px;
-    transition: all 0.3s ease;
-    background-color: #0a0612;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 58px;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #000;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+  background-color: #0a0612;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .subscribe-option[data-best-offer="true"][data-selected="false"]::before {
-    content: "";
-    height: calc(100% + 2px);
-    width: calc(100% + 2px);
-    border-radius: 100px;
-    background-color: #ffffff;
-    position: absolute;
-    background: linear-gradient(8deg, transparent 70%, #fd94f4 87%, #01b4ff 100%);
-    background-color: #25202e;
-    z-index: -1;
+  content: "";
+  height: calc(100% + 2px);
+  width: calc(100% + 2px);
+  border-radius: 100px;
+  background-color: #ffffff;
+  position: absolute;
+  background: linear-gradient(8deg, transparent 70%, #fd94f4 87%, #01b4ff 100%);
+  background-color: #25202e;
+  z-index: -1;
 }
 
 .subscribe-option[data-best-offer="true"][data-selected="true"] .badge-border,
 .subscribe-option[data-best-offer="true"][data-selected="true"] .badge {
-    background: #ffffff;
-    background-color: #ffffff;
-    color: black;
+  background: #ffffff;
+  background-color: #ffffff;
+  color: black;
 }
 
-/* .subscribe-option[data-selected="true"] {
-    background: #ffffff;
-    background-color: #ffffff;
-    border: 1px solid #ffffff;
-} */
-
 .subscribe-option[data-selected="true"] .subscribe-option-content {
-    background-color: #54535b;
-    border: 1px solid #ffffff;
+  background-color: #54535b;
+  border: 1px solid #ffffff;
 }
 
 .subscribe-option-content {
-    transition: all 0.3s ease;
-    border: 1px solid #25202e;
-    background-color: #25202e;
-    padding: 16px 20px;
-    border-radius: 100px;
-    padding: 9px 24px;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between;
+  transition: all 0.3s ease;
+  border: 1px solid #25202e;
+  background-color: #25202e;
+  padding: 16px 20px;
+  border-radius: 100px;
+  padding: 9px 24px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .option-content-access {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 4px;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  height: 100%;
 }
 
 .option-content-access > p {
-    color: #ffffff;
-    text-align: left;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "SF Pro Display";
-    line-height: 100%;
-    text-transform: uppercase;
-    letter-spacing: 0px;
-    text-align: left;
+  color: #ffffff;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "SF Pro Display";
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0px;
+  text-align: left;
 }
 
 .option-content-access > span {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "SF Pro Display";
-    letter-spacing: 0px;
-    line-height: 100%;
-    text-transform: none;
-    text-align: left;
-    opacity: 0.6;
-    color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SF Pro Display";
+  letter-spacing: 0px;
+  line-height: 100%;
+  text-transform: none;
+  text-align: left;
+  opacity: 0.6;
+  color: #ffffff;
 }
 
 .option-content-price {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: column;
-    gap: 0px;
-    height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 0px;
+  height: 100%;
 }
 
 .option-content-price > p {
-    font-size: 16px;
-    font-weight: 400;
-    font-family: "SF Pro Display";
-    letter-spacing: 0px;
-    opacity: 0.6;
-    color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SF Pro Display";
+  letter-spacing: 0px;
+  opacity: 0.6;
+  color: #ffffff;
 }
 .continue-button {
-    border: none;
-    outline: none;
-    width: 100%;
-    background-color: #fff;
-    color: #000;
-    padding: 16px 20px;
-    border-radius: 100px;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding: 16px 20px;
+  border-radius: 100px;
 }
 
 .continue-button span {
-    font-size: 16px;
-    font-weight: 600;
-    font-family: "SF Pro Display";
-    font-size: 20px;
-    line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "SF Pro Display";
+  font-size: 20px;
+  line-height: 24px;
+  text-decoration: none;
 }
 .footer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 52px;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-    padding: 34px 0 8px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 34px 16px 8px;
 }
 
 .footer a {
-    all: unset;
-    text-decoration: underline;
-    font-size: 13px;
-    letter-spacing: 0px;
-    font-weight: 200;
-    color: #fff;
-    text-align: center;
-    opacity: 0.3;
+  all: unset;
+  text-decoration: underline;
+  font-size: 13px;
+  letter-spacing: 0px;
+  font-weight: 200;
+  color: #fff;
+  text-align: center;
+  opacity: 0.3;
 }
 
 .subscribe-option-badge {
-    position: absolute;
-    top: 0;
-    right: 24px;
-    transform: translateY(-66%);
-    z-index: 1;
-    height: 21px;
+  position: absolute;
+  top: 0;
+  right: 24px;
+  transform: translateY(-66%);
+  z-index: 1;
+  height: 21px;
 }
 .badge-border {
-    height: 100%;
-    width: 100%;
-    background: linear-gradient(to right, #ff96f4, #632af7, #00b5ff);
-    padding: 1px;
-    border-radius: 100px;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, #ff96f4, #632af7, #00b5ff);
+  padding: 1px;
+  border-radius: 100px;
 }
 
 .badge {
-    transition: all 0.2s ease;
-    height: 100%;
-    width: 100%;
-    border-radius: 100px;
-    display: flex;
-    background: linear-gradient(to right, #bc1fef, #0035ff);
-    align-items: center;
-    justify-content: center;
-    padding: 0 22px;
-    color: #fff;
+  transition: all 0.2s ease;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  display: flex;
+  background: linear-gradient(to right, #bc1fef, #0035ff);
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  color: #fff;
 }
 
 .badge > span {
-    font-size: 13px;
-    text-transform: uppercase;
-    font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 600;
 
-    letter-spacing: 0px;
+  letter-spacing: 0px;
+}
+
+[data-lang="fr"] .title,
+[data-lang="de"] .title,
+[data-lang="pt"] .title {
+  font-size: 38px;
+}
+
+[data-lang="fr"] .feature-item-content > p,
+[data-lang="es"] .feature-item-content > p {
+  font-size: 11px;
+}
+
+[data-lang="pt"] .feature-item-content > p {
+  font-size: 10px;
+}
+
+@media (max-width: 410px) {
+  [data-lang="fr"] .title,
+  [data-lang="de"] .title,
+  [data-lang="[pt]"] .title {
+    font-size: 36px;
+  }
+}
+@media screen and (max-width: 414px) and (max-height: 737px) {
+  .content {
+    padding: 0 12px;
+  }
+  .header {
+    padding: 0px;
+    padding-top: 10px;
+  }
+  .title {
+    line-height: 100%;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .features-container {
+    margin-bottom: 24px;
+  }
+  .feature-item {
+    height: 123px;
+  }
+  .feature-item-content > p {
+    font-size: 10px;
+  }
+
+  .option-content-access > p {
+    font-size: 13px;
+  }
+  .option-content-access > span {
+    font-size: 13px;
+  }
+  .option-content-price > p {
+    font-size: 13px;
+  }
+  .subscribe-option-badge {
+    height: 18px;
+  }
+  .badge > span {
+    font-size: 11px;
+  }
+  .subscribe-option-content {
+    padding: 12px 16px;
+  }
+  .subscribe-option {
+    height: 50px;
+  }
+
+  .continue-button {
+    padding: 12px 16px;
+    height: 50px;
+  }
+  .features-container {
+    margin-bottom: 16px;
+  }
+  .footer {
+    padding: 16px 12px;
+  }
 }

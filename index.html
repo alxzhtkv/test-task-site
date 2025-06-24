@@ -1,79 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <div class="container">
-            <div class="bg-image"></div>
-            <header class="header">
-                <button class="close-button">
-                    <img src="./images/cross.png" alt="close" />
-                </button>
-            </header>
-            <div class="content">
-                <h1 class="title">
-                    Get Unlimited
-                    <br />
-                    Access
-                </h1>
-                <div class="features-container">
-                    <div class="feature-item">
-                        <img src="./images/bg-creation.png" alt="creation" />
-                    </div>
-                    <div class="feature-item">
-                        <img src="./images/bg-styles.png" alt="styles" />
-                    </div>
-                    <div class="feature-item">
-                        <img src="./images/bg-avatars.png" alt="avatars" />
-                    </div>
-                </div>
-                <div class="subscribe-options">
-                    <button class="subscribe-option" data-selected="false" data-best-offer="true">
-                        <div class="subscribe-option-badge">
-                            <div class="badge-border">
-                                <div class="badge">
-                                    <span>Best offer</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="subscribe-option-content">
-                            <div class="option-content-access">
-                                <p>Yearly access</p>
-                                <span>Just $39.99 per year</span>
-                            </div>
-                            <div class="option-content-price">
-                                <p>$0.48</p>
-                                <p>per week</p>
-                            </div>
-                        </div>
-                    </button>
-                    <button class="subscribe-option" data-selected="true" data-best-offer="false">
-                        <div class="subscribe-option-content">
-                            <div class="option-content-access">
-                                <p>Yearly access</p>
-                            </div>
-                            <div class="option-content-price">
-                                <p>$6.99</p>
-                                <p>per week</p>
-                            </div>
-                        </div>
-                    </button>
-                </div>
-                <button class="continue-button">
-                    <span>Continue</span>
-                </button>
+<html lang="en" data-lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg-image"></div>
+      <header class="header">
+        <a href="#" class="close">
+          <img src="./images/cross.png" alt="close" />
+        </a>
+      </header>
+      <div class="content">
+        <h1 class="title" data-i18n="Get Unlimited <br>Access">Get Unlimited <br />Access</h1>
+        <div class="features-container">
+          <div class="feature-item">
+            <img src="./images/bg-creation.png" srcset="./images/bg-creation.png 1x, ./images/bg-creation@2x.png 2x" alt="creation" />
+            <div class="feature-item-content">
+              <p data-i18n="Unlimited Art <br>Creation">Unlimited Art <br />Creation</p>
+              <div class="feature-item-shadow"></div>
             </div>
-
-            <footer class="footer">
-                <a href="#">Terms of Use</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Restore</a>
-            </footer>
+          </div>
+          <div class="feature-item">
+            <img src="./images/bg-styles.png" srcset="./images/bg-styles.png 1x, ./images/bg-styles@2x.png 2x" alt="styles" />
+            <div class="feature-item-content">
+              <p data-i18n="Exclusive <br>Styles">Exclusive <br />Styles</p>
+              <div class="feature-item-shadow"></div>
+            </div>
+          </div>
+          <div class="feature-item">
+            <img src="./images/bg-avatars.png" srcset="./images/bg-avatars.png 1x, ./images/bg-avatars@2x.png 2x" alt="avatars" />
+            <div class="feature-item-content">
+              <p data-i18n="Magic Avatars <br>With 20% Off">Magic Avatars <br />With 20% Off</p>
+              <div class="feature-item-shadow"></div>
+            </div>
+          </div>
         </div>
-        <script src="index.js"></script>
-    </body>
+        <div class="subscribe-options">
+          <button class="subscribe-option" data-selected="false" data-best-offer="true">
+            <div class="subscribe-option-badge">
+              <div class="badge-border">
+                <div class="badge">
+                  <span data-i18n="BEST OFFER">BEST OFFER</span>
+                </div>
+              </div>
+            </div>
+            <div class="subscribe-option-content">
+              <div class="option-content-access">
+                <p data-i18n="YEARLY ACCESS">Yearly access</p>
+                <span data-i18n="Just {{price}} per year" data-i18n-vars='{"price":"$39.99"}'>Just $39.99 per year</span>
+              </div>
+              <div class="option-content-price">
+                <p data-i18n="{{price}} <br>per week" data-i18n-vars='{"price":"$0.48"}'>$0.48 <br />per week</p>
+              </div>
+            </div>
+          </button>
+          <button class="subscribe-option" data-selected="true" data-best-offer="false">
+            <div class="subscribe-option-content">
+              <div class="option-content-access">
+                <p data-i18n="YEARLY ACCESS">Yearly access</p>
+              </div>
+              <div class="option-content-price">
+                <p data-i18n="{{price}} <br>per week" data-i18n-vars='{"price":"$6.99"}'>$6.99 <br />per week</p>
+              </div>
+            </div>
+          </button>
+        </div>
+        <a href="#" class="continue-button">
+          <span data-i18n="Continue">Continue</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <a href="https://apple.com/" data-i18n="Terms of Use">Terms of Use</a>
+        <a href="https://google.com/" data-i18n="Privacy Policy">Privacy Policy</a>
+        <a href="#" data-i18n="Restore">Restore</a>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
