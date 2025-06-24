@@ -11,7 +11,6 @@ const getLang = () => {
   const languages = ["de", "en", "es", "fr", "ja", "pt"];
   const params = new URLSearchParams(window.location.search);
   const lang = languages.includes([...params.keys()][0]) ? [...params.keys()][0] : "en";
-  console.log(lang);
   return lang;
 };
 
@@ -40,7 +39,6 @@ const translatePage = (translations, lang) => {
     const vars = el.getAttribute("data-i18n-vars");
     if (vars) {
       const values = JSON.parse(vars);
-      console.log(values);
       Object.keys(values).forEach((k) => {
         const regex = new RegExp(`{{\\s*${k}\\s*}}`, "g");
         translation = translation.replace(regex, values[k]);
